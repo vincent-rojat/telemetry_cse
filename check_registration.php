@@ -13,8 +13,8 @@ if (isset ($_SESSION['username'])){
 }
 else{
 	
-    $username = $_POST['username'];
-    $password = $_POST['pass'];
+    $username = mysqli_real_escape_string($connection, $_POST['pass']);
+    $password = mysqli_real_escape_string($connection, $_POST['pass']);
 
 
     $sql1 = "SELECT users_username, users_password FROM users WHERE users_username = '{$username}' AND users_password = '{$password}'";
