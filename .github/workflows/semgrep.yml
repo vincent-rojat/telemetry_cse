@@ -23,7 +23,7 @@ jobs:
     # Step 4: Define the steps of our job
     steps:
       - name: check_out        # Options: choose any name you want. This step checks out our code.
-        uses: action/checkout@v6        # Options: actions/checkout@v6 | actions/setup-node@v3 | docker/setup-buildx-action@v2
+        uses: actions/checkout@v6        # Options: actions/checkout@v6 | actions/setup-node@v3 | docker/setup-buildx-action@v2
         # Hint: Checkout is needed so that semgrep can access your repo code
 
       - name: scanning        # Options: choose any name you want. This step scans our code. 
